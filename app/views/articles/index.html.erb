@@ -1,0 +1,14 @@
+<h1> Index page for aticles</h1>
+    <ul>
+    
+        <% @articles.each do |article| %>
+            <br/>
+            <%= render "article", article:article %>
+            <%= link_to "Show", article %>
+            
+            
+            <br/>
+        <% end %>
+    </ul>
+
+    <%= link_to "New", new_article_path %>
